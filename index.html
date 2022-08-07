@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main page</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+  $(function(){
+  $("#box1,#box2").mouseenter(function(){
+    $(this).removeClass("shadow-sm").addClass("shadow-lg")    
+  });
+  $("#box1,#box2").mouseleave(function(){
+    $(this).removeClass("shadow-lg").addClass("shadow-sm");
+   
+  });
+});
+
+$(function(elementid){
+  $("#box-child1").mouseenter(function(){
+    $(this).removeClass("shadow-sm").addClass("shadow-lg")
+$("#icon-setting1").addClass("icon-circle")
+$("#line1").removeClass("line").animate({width:"100%"})
+  });
+  $(".box-child1").mouseleave(function(){
+    $(this).removeClass("shadow-lg").addClass("shadow-sm");
+    $("#icon-setting1").removeClass("icon-circle")
+    
+    $("#line1").addClass("line")
+  });
+});
+
+$(function(){
+  $(".btn-primary").mouseenter(function(){
+    $(this).css({"background-color": "#ff561d","border-color":"#ff561d"})
+   });
+   $(".btn-primary").mouseleave(function(){
+    $(this).css({"background-color": "#5764ec","border-color":"#5764ec"})
+   });
+  });
+  $(function(){
+  $("#link1,#link2,#link3,#link4,#link5,#link6,#link7,#link8,#link9,#link10,#link11,#link12,#link13,#link14,#link15,#link16,#link17").mouseenter(function(){
+    $(this).removeClass("text-color").addClass("list-hover").css("color","#ff561d")
+   });
+   $("#link1,#link2,#link3,#link4,#link5,#link6,#link7,#link8,#link9,#link10,#link11,#link12,#link13,#link14,#link15,#link16,#link17").mouseleave(function(){
+    $(this).removeClass("list-hover")
+    $(this).addClass("text-color").css("color","white")
+    });
+  });
+  $(function(){
+  $("#icon1,#icon2,#icon3,#icon4").mouseenter(function(){
+    $(this).removeClass("bg-icon").addClass("bg-icon-hover")
+   });
+   $("#icon1,#icon2,#icon3,#icon4").mouseleave(function(){
+  $(this).removeClass("bg-icon-hover").addClass("bg-icon")
+   });
+  });
+  $(function(){
+  $("#img-transform1,#img-transform2,#img-transform3").mouseenter(function(){
+    $(this).removeClass("picture-stop")
+    $(this).addClass("picture-move")
+   });
+   $("#img-transform1,#img-transform2,#img-transform3").mouseleave(function(){
+    $(this).removeClass("picture-move")
+    $(this).addClass("picture-stop")
+    });
+  });
+  $(function () {
+        let pics = ["slider-1.jpg", "slider-2.jpg", "slider-3.jpg"];
+        let counter = 0;
+        for (let i = 0; i < pics.length; i++) {
+          $("#nav ul").append("<li></li>");
+        }
+        $("#nav ul li").eq(0).addClass("active");
+         $("#pic-slide").attr("src", "picture/" + pics[counter]);
+
+
+        $("#next").click(function () {
+          
+          counter++;
+          if (counter < pics.length) {
+          $("#pic-slide").animate({ left: "+=-1920px" }, 1000);}
+          else{
+            $("#pic-slide").animate({ left: "0" }, 1000);
+          }
+
+$("#nav ul li").removeClass("active").eq(counter).addClass("active");
+          
+        
+        });
+
+        $("#prev").click(function () {
+          if (counter == 0) {
+            counter = pics.length -1;
+            $("#pic-slide").animate({ left: "-=1920px" }, 1000);}
+            else{
+              counter--;
+              $("#pic-slide").animate({ left: "-1920px" }, 1000);}
+            
+            $("#nav ul li").removeClass("active").eq(counter).addClass("active");
+        });
+      });
+    </script>
+    <style>
+     
+      .icon-circle{
+        border-radius: 50%;
+        background-color:#5764ec;
+        width: 100px;
+        height:100px;
+      }
+      .padding1 {
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+      }
+      .fontsizing{
+          font-size: 0.9rem;
+          font-weight: 500;
+       }
+      .icon-size{
+        width: 16px;
+        height: 16px;
+      }
+      .icon-size1{
+        width: 70px;
+        height: 50px;
+      }
+      #email-phone:hover
+      {border-bottom: 1px solid ;}
+      
+       .searchicon{
+         color: #737373;
+       }
+       .padding2{
+         padding-top: 120px;
+         padding-bottom: 120px;
+       }
+       .img{
+         width: 100%;
+         height: auto;
+       }
+        h6 {
+    font-size: 16px;
+    color: #ff561d;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.font-1h2 {
+    font-size: 38px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.lorem{
+  font-size: 15px;
+    line-height: 1.8;
+    color: #747576;
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.font-h3{
+  font-size: 20px;
+    font-weight: 800;
+}
+.font-2h2{
+    color: #fff;
+    font-size: 38px;
+    font-weight: 800;
+    text-align:center;
+    margin-bottom: 10px
+    
+  }
+ 
+  .font-2h3{
+    
+    font-size: 18px;
+    color: #5764ec;
+    margin-bottom: 10px;
+}
+  
+.p-Free{
+  color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+.padding3{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.padding4{
+padding-left: 120px;
+}
+.bg2{
+  background-image: url(picture/photo-1600267204026-85c3cc8e96cd.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  z-index: 1;
+
+}
+.padding5{
+  padding-bottom: 80px;
+}
+.Read-more{
+  display: inline-block;
+    font-size: 15px;
+    color: #5764ec;
+    font-weight: 700;
+    -webkit-transition: all 400ms ease-out;
+    transition: all 400ms ease-out;
+    will-change: transform;
+
+}
+.text-btn{
+  color: #ffffff;
+  text-align: center;
+  font-size: 15px;
+    font-weight: 600;
+   
+}
+.padding-number{
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.bg-row-number{
+  background-color: rgba(136, 116, 181, .11);
+}
+.number-h3 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+}
+.number-h2 {
+    color: #333;
+    font-size: 55px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    word-spacing: -10px;
+   }
+   .title-h6 {
+    font-size: 16px;
+    color: #ff561d;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.title-h2 {
+    font-size: 38px;
+    color: #0b0b31;
+    font-weight: 800;
+    margin: 0;
+}
+.title-h3{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.picture{
+  
+  max-width: 100%;
+  height:auto
+ }
+.bg3{
+  background-image: url(picture/photo-1600267204026-85c3cc8e96cd.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+
+}
+.bg-footer{
+  background: #252525;
+}
+.p-footer{
+   font-size: 15px;
+    color: #e0dbdb;
+}
+.margin-6pic{
+  margin-top: 80px;
+}
+.margin-1pic{
+margin-bottom: 100px;
+}
+.list-style-footer{
+  list-style-type: none;
+}
+.pe-title-footer{
+  padding-right: 120px;
+}
+.font-list{
+  font-size: 0.9rem;
+font-weight: 500;
+}
+.form-footer{
+    max-width: 580px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+.button-all{
+  position: absolute;
+    right: 4px;
+    top: 4px;
+    color: #ffffff;
+    font-size: 15px;
+    background-color: #ff561d;
+    border: none;
+    height: 46px;
+    line-height: 46px;
+    padding: 0 20px;
+    border-radius: 3px;
+    transition: all 400ms ease-out;
+    will-change: transform;
+   }
+   .footer-under{
+    background-color: #1f1f1f;
+   }
+   .border-footer{
+     border-left: 1px solid white;
+   }
+  .size-font{
+     font-size: 0.9rem;
+    
+   }
+  
+   #social-media:hover{
+     border: 1px solid white;
+     border-radius: 50%;
+     padding: 5px;
+   }
+   .hidden-circle{
+overflow: hidden;
+   }
+   #circle{
+     background-color: #5764ec;
+     width: 100px;
+     height: 100px;
+     border-radius: 50%;
+     top: 30px;
+     left: -10px;
+   }
+   #line1,#line2,#line3,#line4,#line5,#line6{
+     background-color:  #5764ec;
+     height: 3px;
+     width: 0px;
+     
+   }
+   .number{
+     background-color:#5764ec ;
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+   }
+   .box-animate{
+     width: 200px;
+  margin-left: 80px;
+   
+   }
+  .text-color{
+    color: white;
+  }
+  .list-hover{
+border-bottom: 1px solid #ff561d;
+   }
+   .bg-icon{
+     background-color: white;
+     border-radius: 5px;
+   }
+   .bg-icon-hover{
+     background-color: #ff561d;
+     border-radius: 50%;
+   }
+   .size-image{
+     max-width: 100%;
+     height: auto;
+   }
+   .link-box{
+     border-left:1px solid black
+    }
+    .a-hover{
+      color: #5764ec;
+    }
+    .picture-move{
+      transform: 
+       rotate(
+3deg
+) scale(1.1, 1.1);
+    }
+    .picture-stop{
+      transform: 
+       rotate(
+0deg
+) scale(1, 1);
+    }
+    .picture-slide{
+      display: flex;
+      
+      position: absolute;
+      
+     }
+     .picture-slid2{
+       width: 100%;
+       left: 0;
+      right: 0;
+      height: 630px;
+     }
+    #body-col{
+     position: relative;
+     overflow: hidden;
+     height: 630px;
+    }
+    #col-text{
+      position: relative;
+    }
+    .text-slide{
+      position:absolute;
+      bottom: 100px;
+      width:500px
+      }
+      #nav {
+        position: absolute;
+        width: 100%;
+        height: 30px;
+
+        bottom: 0;
+        left: 0;
+      }
+      #nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+     
+      #nav ul li {
+        background-color: #ccc;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        margin: 5px;
+      }
+      #nav ul li.active {
+        background-color: red;
+      }
+      #next{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: whitesmoke;
+       right: 50px;
+        bottom: 300px;
+      }
+      
+      #prev{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: whitesmoke;
+        left: 50px;
+        bottom: 300px;
+      }
+      .icon-slide{
+        width: 40px;
+        height: 40px;
+        padding-top: 10px;
+      }
+      .line{
+        width: 0;
+      }
+  </style>
+   
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row bg-primary d-none d-md-block">
+        <div class="col-12">
+          <div class="container">
+            <div class="row padding1">
+              <div class="col-3">
+                <div class="child text-white"><img src="picture/placeholder.png" class="icon-size"><span class="size-font"> 526 Melrose Street,New York.</span></div>
+              </div>
+              <div class="col-2">
+                <div class="child text-white"><img src="picture/email.png" class="icon-size" ><a href="#" class="text-decoration-none text-white size-font "  id="email-phone"> info@example.com</a></div>
+              </div>
+              <div class="col-2">
+                <div class="child text-white"><img src="picture/telephone.png" class="icon-size" ><a href="#" class="text-decoration-none text-white"><span class="size-font" id="email-phone"> +505 307 222-33</span></a></div>
+              </div>
+              <div class="col"></div>
+              <div class="col"></div>
+              <div class="col-2">
+                <div class="child text-white">
+                  <div class="row ">
+                    <div class="col-3">
+                      <div class="facebook  text-center"><a href="#"  id="social-media"><img src="picture/facebook.svg" class="icon-size "></a></div>
+                    </div>
+                    <div class="col-3">
+                      <div class="tweter  text-center"><a href="#" id="social-media"><img src="picture/twitter.png" class="icon-size"></a></div>
+                    </div>
+                    <div class="col-3">
+                      <div class="lnkedin  text-center"><a href="#" id="social-media"><img src="picture/linkedin.svg" class="icon-size"></a></div>
+                    </div>
+                    <div class="col-3">
+                      <div class="instagram  text-center"><a href="#" id="social-media"><img src="picture/instagram.svg" class="icon-size"></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row border-bottom">
+          <div class="col-12">
+              <div class="container">
+                  <div class="row bg-light">
+                      <div class="col-12">
+                          <div class="row pt-3 pb-3 align-items-center g-0">
+                          <div class="col-2"><div class="child "><img src="picture/logo.png" alt=""></div></div>
+                          <div class="col"><div class="child d-none d-md-block">
+                            <div class="btn-group" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-light dropdown-toggle fontsizing text-muted nav-list" data-bs-toggle="dropdown" aria-expanded="false">
+                              Home
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1" >
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">Home1</a></li>
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">Home2</a></li>
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">Home3</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                    </div>
+                          <div class="col"><div class="child d-none d-md-block"><button class="btn btn-light text-muted">About Us</button></div></div>
+                          <div class="col"><div class="child d-none d-md-block">
+                              <div class="btn-group" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-light dropdown-toggle fontsizing text-muted" data-bs-toggle="dropdown" aria-expanded="false">
+                             Services
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">Services1</a></li>
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">Services2</a></li>
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">Services3</a></li>
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">Services4</a></li>
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">Services details</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                    </div>
+                          <div class="col"><div class="child d-none d-md-block"> 
+                              <div class="btn-group" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-light dropdown-toggle fontsizing text-muted" data-bs-toggle="dropdown" aria-expanded="false">
+                            Project
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">Project1</a></li>
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">Project2</a></li>
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">Project3</a></li>
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">Project4</a></li>
+                            
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                          <div class="col"><div class="child d-none d-md-block"> 
+                              <div class="btn-group" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-light dropdown-toggle fontsizing text-muted" data-bs-toggle="dropdown" aria-expanded="false">
+                             Pages
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">Team</a></li>
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">Single Project</a></li>
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">Testimonials</a></li>
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">Pricing</a></li>
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">FAQ</a></li>
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">404 Error</a></li>
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">Coming Soon</a></li>
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">Terms & Conditions</a></li>
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">Privacy Policy</a></li>
+                             </ul>
+                          </div>
+                        </div>
+                    </div>
+                          <div class="col"><div class="child d-none d-md-block"> 
+                              <div class="btn-group" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-light dropdown-toggle fontsizing text-muted" data-bs-toggle="dropdown" aria-expanded="false">
+                             Blog
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">Blog Grid</a></li>
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">Blog Right Sidebar</a></li>
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">Blog Left Sidebar</a></li>
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">Blog Details</a></li>
+                              </ul>
+                          </div>
+                        </div>
+                    </div>
+                          <div class="col"><div class="child d-none d-md-block">
+                               <div class="btn-group" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-light dropdown-toggle fontsizing text-muted" data-bs-toggle="dropdown" aria-expanded="false">
+                             Contact
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">Contact1</a></li>
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">Contact2</a></li>
+                              <li><a class="dropdown-item text-muted fontsizing" href="#">Contact3</a></li>
+                              </ul>
+                          </div>
+                        </div>
+                    </div>
+                          <div class="col"><div class="child  text-end d-none d-md-block"><img src="picture/search-1.svg"class="icon-size" alt="">  </div></div>
+                          <div class="col-2"><div class="child  text-end d-none d-md-block">
+                              <button type="button" class="btn btn-primary fontsizing btn-lg px-4 py-2">Get It Support</button>
+                            </div>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+     </div>
+     <div class="row">
+       <div class="col-12" id="body-col">
+       <div class="picture-slide" id="pic-slide">
+         <img src="picture/slider-1.jpg" id="first-pic">
+         <img src="picture/slider-2.jpg" >
+         <img src="picture/slider-3.jpg" >
+        </div>
+         <div class="container">
+           <div class="row ">
+             <div class="col-4"><div class="text-slide ">
+               <h6 class="text-dark fs-2 pb-4" id="h6-1 ">Quality IT Solutions& Digital Services Provide </h6>
+               <p class="text-muted pb-4" id="h6-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium repellat aliquam unde in, maxime necessitatibus laborum facilis fuga</p>
+               <span id="span1-1"><button class="btn btn-primary me-5 fw-bold px-4">Contact Us</button></span><span id="span1-2"><button class="btn btn-primary fw-bold px-4">IT Solutions</button></span></span>
+             </div>
+             <div id="nav">
+               <ul>
+                 
+               </ul>
+               <div id="next"><img src="picture/arrow-right.svg" class="icon-slide"></div>
+               <div id="prev"><img src="picture/arrow-left.svg" class="icon-slide"></div>
+             </div>
+             </div>
+          </div>
+       </div>
+     </div>
+     <div class="row padding2">
+       <div class="col-12">
+         <div class="container">
+           <div class="row">
+             <div class="col-md-6 "><img src="picture/about.jpg" class="img" alt=""></div>
+             <div class="col-md-6 ">
+               <div class="row"><div class="col-12 "><h6 >ABOUT US</h6></div></div>
+               <div class="row"><div class="col-12  font-h2"><h2>We Offer Professional IT Solutions For Your Business</h2></div></div>
+               <div class="row"><div class="col-12 "><p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p></div></div>
+               <div class="row"><div class="col-12">
+                 <div class="row g-0">
+                 <div class="col"><img src="picture/certificate.svg" class="icon-size1"></div>  
+                 <div class="col-10">
+                   <div class="row"><div class="col "><h3 class="font-h3">Certified Company</h3></div>
+                   </div>
+                   <div class="row"><div class="col"><p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor incididunt labore aliqua.</p></div>
+                  </div>
+                  </div>
+               </div></div></div>
+               <div class="row"><div class="col-12">
+                 <div class="row">
+                <div class="col"><img src="picture/checklist.svg" class="icon-size1"></div>
+                <div class="col-10">
+                  <div class="row"><div class="col"><h3 class="font-h3">Quality IT Solutions</h3></div>
+              </div>
+              <div class="row"><div class="col"><p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor incididunt labore aliqua.</p></div>
+             </div></div>
+              </div></div></div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="row justify-content-center  bg2">
+       <div class="col-md-6  padding3">
+         <div class="row ">
+           <div class="col"> <h2 class="font-md-2h2 fs-3 fw-bolder text-center text-white">We’re here to help and answer any</h2></div>
+         </div>
+         <div class="row">
+           <div class="col"><h2 class="font-md-2h2 fs-3 fw-bolder text-center text-white">question you might have.</h2></div>
+         </div>
+         <div class="row">
+           <div class="col"><p class="p-Free  ">Free Consultation About Our IT Solutions For Your Business</p></div>
+         </div>
+         <div class="row">
+           <div class="col text-center"><button type="button" class="btn btn-primary">Get Free Consulation Now</button></div>
+         </div>
+       </div>
+     </div>
+     <div class="row padding3">
+       <div class="col-12">
+         <div class="container">
+           <div class="row mb-md-5">
+             <div class="col-md-6"><div class="child pt-4 pb-4 position-relative rounded-3 hidden-circle  shadow-sm" id="box1">
+<div class="row"><div class="col padding4"><h3 class="font-2h3">IT Solutions</h3></div></div>
+<div class="row"><div class="col padding4"><p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor incididunt labore aliqua.</p> 
+  <div class="position-absolute text-center  pt-4" id="circle"><img src="picture/cpu.svg" class="icon-size1"></div>
+</div>
+</div>
+</div>
+ </div> 
+
+               <div class="col-md-6  mt-md-0"><div class="child pt-4 pb-4 position-relative rounded-3 hidden-circle  shadow-sm" id="box2">
+              <div class="row"><div class="col padding4 "><h3 class="font-2h3">Digital Solutions</h3></div></div>
+              <div class="row"><div class="col padding4"><p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor incididunt labore aliqua.</p>
+                <div class="position-absolute text-center pt-4" id="circle"><img src="picture/gear.svg" class="icon-size1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="row text-center">
+       <div class="col-12">
+         <div class="container">
+           <div class="row">
+             <div class="col-md-4 "><div class="shadow-sm" id="box-child1">
+               <div class="row pt-5 justify-content-center ">
+               <div class="col-10  "><div class="child"><img src="picture/gear.svg" class="icon-size1" id="icon-setting1" ></div></div>
+             </div>
+             <div class="row pt-4 justify-content-center">
+               <div class="col-10   "><div class="child "><h3 class="font-h3">Managed Services</h3></div></div>
+             </div>
+             <div class="row pt-4 justify-content-center">
+               <div class="col-10"><div class="child"><p  class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua</p></div></div>
+             </div>
+             <div class="row py-4 justify-content-center ">
+               <div class="col-10"><div class="child"><a href="# "class="text-decoration-none Read-more">Read More</a></div></div>
+             </div>
+             <div class="col-12 bg-danger position-relative"><div class="box-child position-absolute" id="line1" class="line">5</div>
+             </div></div></div>
+           <div class="col-md-4 "><div class="box-child shadow-sm">
+             <div class="row pt-5 justify-content-center">
+            <div class="col-10 "><div class="child"><img src="picture/gear.svg" class="icon-size1" id="icon-setting2"></div></div>
+          </div>
+          <div class="row pt-4 justify-content-center">
+            <div class="col-10 "><div class="child "><h3 class="font-h3">Cyber Security</h3></div></div>
+          </div>
+          <div class="row pt-4 justify-content-center">
+            <div class="col-10"><div class="child"><p  class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua</p></div></div>
+          </div>
+          <div class="row py-4 justify-content-center">
+            <div class="col-10"><div class="child"><a href="# "class="text-decoration-none Read-more">Read More</a></div></div>
+          </div>
+          <div class="col-12  text-center position-relative"><div class="box-child  position-absolute" id="line2">5</div>
+          </div></div></div>
+          <div class="col-md-4"><div class="box-child shadow-sm">
+            <div class="row pt-5 justify-content-center ">
+            <div class="col-10"><div class="child"><img src="picture/gear.svg" class="icon-size1" id="icon-setting3"></div></div>
+          </div>
+          <div class="row pt-4 justify-content-center">
+            <div class="col-10 "><div class="child"><h3 class="font-h3">Business Improvement</h3></div></div>
+          </div>
+          <div class="row pt-4 justify-content-center">
+            <div class="col-10"><div class="child"><p  class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua</p></div></div>
+          </div>
+          <div class="row py-4 justify-content-center">
+            <div class="col-10"><div class="child"><a href="# "class="text-decoration-none Read-more">Read More</a></div></div>
+          </div>
+          <div class="col-12 text-center position-relative"><div class="box-child position-absolute" id="line3">5</div>
+          </div></div></div></div>
+           <div class="row pt-4">
+            <div class="col-md-4"><div class="box-child shadow-sm">
+              <div class="row pt-5 justify-content-center ">
+              <div class="col-10"><div class="child"><img src="picture/gear.svg" class="icon-size1" id="icon-setting4"></div></div>
+            </div>
+            <div class="row pt-4 justify-content-center">
+              <div class="col-10"><div class="child"><h3 class="font-h3">Professional Services</h3></div></div>
+            </div>
+            <div class="row pt-4 justify-content-center">
+              <div class="col-10"><div class="child"><p  class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua</p></div></div>
+            </div>
+            <div class="row py-4 justify-content-center">
+              <div class="col-10 "><div class="child"><a href="#"class="text-decoration-none Read-more">Read More</a></div></div>
+            </div>
+            <div class="col-12 bg-info text-center position-relative"><div class="box-child position-absolute" id="line4">5</div>
+            </div></div></div>
+            <div class="col-md-4"><div class=" shadow-sm" >
+              <div class="row pt-5 justify-content-center ">
+              <div class="col-10"><div class="child"><img src="picture/gear.svg" class="icon-size1" id="icon-setting5"></div></div>
+            </div>
+            <div class="row pt-4 justify-content-center">
+              <div class="col-10"><div class="child "><h3 class="font-h3">Cloud Services</h3></div></div>
+            </div>
+            <div class="row pt-4 justify-content-center">
+              <div class="col-10"><div class="child"><p  class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua</p></div></div>
+            </div>
+            <div class="row py-4 justify-content-center">
+              <div class="col-10 "><div class="child "><a href="# "class="text-decoration-none Read-more">Read More</a></div></div>
+            </div>
+            <div class="col-12 text-center position-relative"><div class=" box-child position-absolute"id="line5">5</div>
+            </div></div></div>
+            <div class="col-md-4"><div class="box-child shadow-sm">
+              <div class="row pt-5 justify-content-center ">
+              <div class="col-10"><div class="child"><img src="picture/gear.svg" class="icon-size1" id="icon-setting6"></div></div>
+            </div>
+            <div class="row pt-4 justify-content-center">
+              <div class="col-10"><div class="child"><h3 class="font-h3">Data Backup & Recovery</h3></div></div>
+            </div>
+            <div class="row pt-4 justify-content-center">
+              <div class="col-10"><div class="child"><p  class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua</p></div></div>
+            </div>
+            <div class="row py-4 justify-content-center">
+              <div class="col-10"><div class="child"><a href="# "class="text-decoration-none Read-more">Read More</a></div></div>
+            </div>
+            <div class="col-12 text-center position-relative"><div class="box-child position-absolute" id="line6">5</div>
+            </div></div></div></div>
+           <div class="row py-5 ">
+            <div class="col-12 pb-5">
+              <div class="btn-box text-center">
+                <a href="#" class="text-btn text-decoration-none btn btn-primary me-4">Get Free Quote</a>
+                <a href="#" class="text-btn text-decoration-none btn btn-primary">More Services</a>
+              </div>
+            </div>
+          </div>
+        </div>
+     <div class="row text-align bg-row-number">
+       <div class="col">
+         <div class="container">
+           <div class="row padding-number">
+             <div class="col-md-3 ">
+               <div class="row"><div class="col "><div class="child"><h2 class="number-h2"><span>0</span><span>+</span></h2></div></div></div>
+               <div class="row pt-3"><div class="col"><div class="child"><h3 class="number-h3 ">Years In Business</h3></div></div></div>
+             </div>
+             <div class="col-md-3 ">
+               <div class="row"><div class="col pt-md-0 pt-5"><div class="child"><h2 class="number-h2"><span>0.0</span><span>k</span></h2></div></div></div>
+               <div class="row pt-3"><div class="col"><div class="child"><h3 class="number-h3">Project Complete</h3></div></div></div>
+             </div>
+             <div class="col-md-3">
+               <div class="row"><div class="col pt-md-0 pt-5"><div class="child"><h2 class="number-h2"><span>0</span><span>+</span></h2></div></div></div>
+               <div class="row pt-3"><div class="col"><div class="child"><h3 class="number-h3">Reviews</h3></div></div></div>
+             </div>
+             <div class="col-md-3">
+               <div class="row"><div class="col pt-md-0 pt-5"><div class="child"><h2 class="number-h2"><span>0</span><span>+</span></h2></div></div></div>
+               <div class="row pt-3"><div class="col"><div class="child"><h3 class="number-h3">Team Members</h3></div></div></div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="row pt-5">
+       <div class="col pt-5">
+         <div class="container">
+           <div class="row justify-content-center"><div class="col-md-6 "><h6 class="title-h6" >INSPIRE SO DIFFERENT?</h6></div></div>
+           <div class="row justify-content-center"><div class="col-md-6"><h2 class="title-h2">Why Choose Us</h2></div></div>
+           <div class="row pt-5">
+             <div class="col-md-4 pt-5"><div>
+               <div class="row">
+                 <div class="col-2 pt-4"><div class="child  text-white fw-bolder number pt-2">1</div></div>
+               <div class="col-10 pt-5"><div class="child "><h3 class="title-h3">Highly Trained Technical Staff</h3></div></div>
+              </div>
+             <div class="row justify-content-end"><div class="col-10"><div class="child bg-light text-start"><p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua.</p></div></div></div>
+            </div>
+            </div>
+             <div class="col-md-4 pt-5"><div>
+               <div class="row">
+                 <div class="col-2 pt-4"><div class="child text-white fw-bolder number pt-2">2</div></div>
+               <div class="col-10 pt-5"><div class="child"><h3 class="title-h3">Increase Your Performance</h3></div></div>
+              </div>
+             <div class="row justify-content-end"><div class="col-10"><div class="child bg-light text-start"><p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua.</p></div></div></div>
+            </div>
+          </div>
+             <div class="col-md-4 pt-5"><div>
+               <div class="row">
+                 <div class="col-2 pt-4"><div class="child text-white fw-bolder number pt-2">3</div></div>
+               <div class="col-10 pt-5"><div class="child"><h3 class="title-h3">Reduce Operational Downtime</h3></div></div>
+              </div>
+             <div class="row justify-content-end"><div class="col-10"><div class="child bg-light text-start"><p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua.</p></div></div></div>
+            </div>
+          </div>
+        </div>
+           <div class="row pt-md-5">
+             <div class="col-md-4 pt-5"><div>
+               <div class="row">
+                 <div class="col-2 pt-4"><div class="child text-white fw-bolder number pt-2">4</div></div>
+               <div class="col-10 pt-5"><div class="child"><h3 class="title-h3">Cross-Industry Expertise</h3></div></div>
+              </div>
+             <div class="row justify-content-end"><div class="col-10"><div class="child bg-light text-start"><p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua.</p></div></div></div>
+            </div>
+            </div>
+             <div class="col-md-4 py-5"><div class=" pb-5">
+               <div class="row">
+                 <div class="col-2 pt-4"><div class="child text-white fw-bolder number pt-2">5</div></div>
+               <div class="col-10 pt-5"><div class="child"><h3 class="title-h3"> Dedicated IT Support</h3></div></div>
+              </div>
+             <div class="row justify-content-end"><div class="col-10"><div class="child bg-light text-start"><p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua.</p></div></div></div>
+            </div>
+            </div>
+             <div class="col-md-4 py-md-5"><div class="pb-5">
+               <div class="row">
+                 <div class="col-2 pt-4"><div class="child text-white fw-bolder number pt-2">6</div></div>
+               <div class="col-10 pt-5"><div class="child"><h3 class="title-h3">Affordable Rates</h3></div></div>
+              </div>
+             <div class="row justify-content-end"><div class="col-10"><div class="child bg-light text-start"><p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua.</p></div></div></div>
+            </div>
+           </div>
+           </div>
+           </div>
+       </div>
+     </div>
+     <div class="row py-5 bg-row-number">
+       <div class="col">
+         <div class="container">
+         <div class="row pt-5"><div class="col"><div class="child"><h6 class="title-h6">FEATURED WORKS</h6></div></div></div>
+         <div class="row"><div class="col"><div class="child"><h2 class="title-h2">Latest Case Studies</h2></div></div></div>
+         <div class="row pt-5">
+           <div class="col-md-4 mt-md-0 margin-6pic position-relative"><div class="child  "><img src="picture/projects-1.jpg" class="picture rounded-3 "
+            ><div class="box-animate bg-success rounded-3 py-4"><h5>App Customization</h5></div></div></div>
+         <div class="col-md-4 mt-md-0 margin-6pic "><div class="child  position-relative"><img src="picture/projects-2.jpg"  class="picture rounded-3"><div class="box-animate bg-success rounded-3 py-4"><h5>Data Management</h5></div></div></div>
+         <div class="col-md-4 mt-md-0 margin-6pic"><div class="child  position-relative"><img src="picture/projects-3.jpg"  class="picture rounded-3"><div class="box-animate bg-success rounded-3 py-4"><h5>Technology Solutions</h5></div></div></div>
+        </div>
+         <div class="row pt-md-4">
+        <div class="col-md-4 mt-md-0 margin-6pic"><div class="child  position-relative"><img src="picture/projects-4.jpg"  class="picture rounded-3"><div class="box-animate bg-success rounded-3 py-4"><h5>Web Development</h5></div></div></div>
+         <div class="col-md-4 mt-md-0 margin-6pic"><div class="child  position-relative"><img src="picture/projects-5.jpg"  class="picture rounded-3"><div class="box-animate bg-success rounded-3 py-4"><h5>Digital Marketing</h5></div></div></div>
+         <div class="col-md-4 mt-md-0 margin-6pic"><div class="child position-relative"><img src="picture/projects-6.jpg"  class="picture rounded-3"><div class="box-animate bg-success rounded-3 py-4"><h5>Trouble Shooting</h5></div></div></div>
+        </div>
+         <div class="row py-5 ">
+           <div class="col-2 d-none d-md-block"></div>
+         <div class="col-2 d-none d-md-block"></div>
+         <div class="col-md-2 col-6 text-end"><div class="button"><a href="#" class="btn btn-primary text-btn">Get Free Quote</a></div></div>
+         <div class="col-md-2 col-6 text-start"><div class="button "><a href="#" class="btn btn-primary text-btn">View All Projects</a></div></div>
+         <div class="col-2 d-none d-md-block"></div>
+         <div class="col-2 d-none d-md-block"></div></div></div>
+       </div>
+     </div>
+     <div class="row">
+       <div class="col">
+         <div class="container">
+           <div class="row pt-5"><div class="col pt-5"><div class="child"><h6 class="title-h6">WHAT OUR CLIENT SAY</h6></div></div></div>
+           <div class="row"><div class="col"><div class="child"><h2 class="title-h2">Resent Feedback</h2></div></div></div>
+           <div class="row bg-danger">1</div>
+           <div class="row bg-info">1</div>
+         </div>
+       </div>
+     </div>
+     <div class="row">
+       <div class="col">
+         <div class="container">
+           <div class="row "><div class="col pt-5"><div class="child"><h6 class="title-h6">OUR LATEST BLOG</h6></div></div>
+         <div class="row "><div class="col"><div class="child"><h2 class="title-h2">News & Updates</h2></div></div>
+         <div class="row mt-5 ">
+           <div class="col-md-4 ">
+             <div class="bg-danger overflow-hidden"><img src="picture/blog-1.jpg" class="size-image picture-move picture-stop" id="img-transform1" ></div></div>
+         <div class="col-md-4 ">
+           <div class="bg-danger overflow-hidden" ><img src="picture/blog-2.jpg" class="size-image  picture-move picture-stop" id="img-transform2"></div></div>
+         <div class="col-md-4 ">
+           <div class="bg-danger overflow-hidden"><img src="picture/blog-3.jpg" class="size-image picture-move  picture-stop" id="img-transform3"></div></div>
+        </div>
+        <div class="row mb-5">
+          <div class="col-md-4 shadow-lg"><div class="bg-light">
+            <div class="row "><div class="col pt-4 "><div class=" text-start"><span class="px-3 fw-bold text-secondary">20 January - 2021</span><a href="#" class="link-box px-3 text-decoration-none fw-bold">Technology</a></div></div></div>
+          <div class="row"><div class="col pt-4 px-3"><div class=" text-start px-3"><a href="#" class=" a-hover text-decoration-none text-dark fw-bolder fs-5 ">what could 5g change about the way we use technology?</a></div></div></div>
+          <div class="row"><div class="col pt-4"><div class=" px-3"><p class="text-muted text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore veniam dolore.</p></div></div></div>
+          <div class="row"><div class="col py-4"><div class=" px-3 text-start "><a href="#" class="text-decoration-none text-secondary fw-bolder fs-5">+ Read More</a></div></div></div></div></div>
+        <div class="col-md-4 shadow-lg"><div class="bg-light">
+          <div class="row"><div class="col  pt-4"><div class=" text-start"><span class="px-3 fw-bold text-secondary">25 January - 2021</span><a href="#" class="link-box px-3 text-decoration-none fw-bold">IT Services</a></div></div></div>
+        <div class="row"><div class="col  pt-4"><div class=" text-start px-3"><a href="#" class="a-hover text-decoration-none text-dark fw-bolder fs-5 ">3 factors to consider when choosing a managed it services</a></div></div></div>
+        <div class="row"><div class="col  pt-4"><div class="px-3"><p class="text-muted text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore veniam dolore.</p></div></div></div>
+        <div class="row"><div class="col  py-4 shadow-lg"><div class=" px-3 text-start "><a href="#" class="text-decoration-none text-secondary fw-bolder fs-5">+ Read More</a></div></div></div></div></div>
+        <div class="col-md-4 shadow-lg"><div class="bg-light"><div class="row"><div class="col pt-4"><div class=" text-start"><span class="px-3 fw-bold text-secondary">30 January - 2021</span><a href="#" class="link-box px-3 text-decoration-none fw-bold">Business</a></div></div></div>
+        <div class="row"><div class="col  pt-4"><div class=" text-start px-3"><a href="#" class="a-hover text-decoration-none text-dark fw-bolder fs-5 ">how to quickly shift to a work-from-home Business model </a></div></div></div>
+        <div class="row"><div class="col  pt-4"><div class=" px-3"><p class="text-muted text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore veniam dolore.</p></div></div></div>
+        <div class="row"><div class="col  py-4"><div class=" text-start px-3 text-decoration-none"><a href="#" class="text-decoration-none text-secondary fw-bolder fs-5">+ Read More</a></div></div></div></div></div>
+       </div>
+         <div class="row">
+           <div class="col-2 d-none d-md-block"></div>
+         <div class="col-2 d-none d-md-block"></div>
+         <div class="col-md-2"><div class="button "><a href="#" class="btn btn-primary text-btn">Get Free Quote</a></div></div>
+         <div class="col-md-2"><div class="button "><a href="#" class="btn btn-primary text-btn ">View All Blog</a></div></div>
+         <div class="col-2 d-none d-md-block"></div>
+         <div class="col-2 d-none d-md-block"></div>
+        </div>
+      </div>
+       </div>
+     </div>
+     <div class="row ">
+       <div class="col">
+         <div class="container">
+           <div class="row bg3 py-5 mt-5 margin-1pic rounded-3 ">
+             <div class="col">
+               <div class="row justify-content-center">
+                 <div class="col-md-8 pt-5"><h2 class="font-md-2h2 fs-3 fw-bolder text-center text-white">Discuss An Upcoming IT Project</h2></div></div>
+             <div class="row justify-content-center"><div class="col-md-6"><p class="p-Free">For A Free Consultation Call Today +707 555-321</p></div></div>
+             <div class="row justify-content-center pb-5"><div class="col-md-6"><button class="btn btn-primary text-btn">Contact Us Now</button></div></div></div>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="row bg-footer py-5">
+       <div class="col">
+         <div class="container">
+           <div class="row py-5">
+             <div class="col-md-3 pt-4">
+               <div class="row"><div class="col text-start"><div class="child "><img src="picture/logo1.png" alt=""></div></div></div>
+             <div class="row"><div class="col text-start pt-4"><p class="p-footer">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, odit? Adipisci veniam id laboriosam facilis neque officiis modi, cum nihil! Vitae necessitatibus odio nemo repellat, sint dolor ut optio recusandae.</p></div></div>
+             <div class="row">
+               <div class="col-2"><div class="socilal-media text-white bg-icon" id="icon1"><img src="picture/facebook.svg" class="icon-size"></div></div>
+               <div class="col-2"><div class="socilal-media text-white bg-icon" id="icon2"><img src="picture/twitter.png" class="icon-size"></div></div>
+               <div class="col-2"><div class="socilal-media text-white bg-icon" id="icon3"><img src="picture/linkedin.svg" class="icon-size" ></div></div>
+               <div class="col-2"><div class="socilal-media text-white bg-icon" id="icon4"><img src="picture/instagram.svg" class="icon-size"></div></div>
+              </div></div>
+             <div class="col-md-2 pt-4">
+               <div class="row"><div class="col"><div class="title pe-4"><h5 class="footer-title text-white  ">Company</h5></div></div></div>
+             <div class="row pt-4"><div class="col"><div class="list text-start"><ul class="ul-list list-style-footer">
+               <li class="list pt-2"><a href="#" class="contact text-decoration-none   list-footeri  text-color"
+                id="link1" >About Us</a></li>
+               <li class="list pt-2" ><a href="#" class="contact text-decoration-none text-color " id="link2">Latest Project</a></li>
+               <li class="list pt-2" ><a href="#" class="contact text-decoration-none text-color" id="link3">IT Solutions</a></li>
+               <li class="list pt-2"><a href="#" class="contact text-decoration-none text-color" id="link4">Digital Solutions</a></li>
+               <li class="list pt-2"><a href="#" class="contact text-decoration-none text-color" id="link5">Team Member</a></li>
+               <li class="list pt-2"><a href="#"  class="contact text-decoration-none text-color" id="link6">Contact Us</a></li>
+             </ul>
+            </div>
+          </div>
+        </div>
+            </div>
+             <div class="col-md-3 pt-4 "><div class="row"><div class="col"><div class="title "><h5 class="footer-title text-white  pe-title-footer" >Services</h5></div></div></div>
+             <div class="row pt-4"><div class="col"><div class="list text-start"><ul class="ul-list list-style-footer ">
+               <li class="list pt-2"><a href="#" class="contact text-decoration-none  text-color" id="link8">IT Strategy</a></li>
+               <li class="list pt-2"><a href="#" class="contact text-decoration-none text-color" id="link9">Network Services</a></li>
+               <li class="list pt-2"><a href="#" class="contact text-decoration-none text-color" id="link10">Software Audits</a></li>
+               <li class="list pt-2"><a href="#" class="contact text-decoration-none text-color" id="link11">Business intelligence</a></li>
+               <li class="list pt-2"><a href="#" class="contact text-decoration-none text-color" id="link12">Data Science</a></li>
+               <li class="list pt-2"><a href="#"  class="contact text-decoration-none text-color" id="link13">Virtual Workstation</a></li>
+             </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+             <div class="col-md-4 pt-4">
+               <div class="row"><div class="col"><div class="title pe-4"><h5 class="footer-title text-white ">Contact Info</h5></div></div></div>
+             <div class="row pt-4"><div class="col">
+            <ul class="ul-list text-decoration-none list-style-footer text-white text-start">
+              <li><p class="font-list">Address: 256 Merlose Street, Water Mill, Newyork.</p></li>
+              <li><span>phone:</apan><a href="#" class="text-decoration-none text-color " id="link14"> +080 707 555-321</a></li>
+              <li class="pt-3"><span>Email:</span><a href="#" class="text-decoration-none  text-color" id="link15"> contact-info@example.com</a></li>
+            </ul>
+             </div></div>
+             <div class="row"><div class="col text-end">
+               <div><form class=" mt-2 form-footer"><input type="email" placeholder="Enter your email" name="Email" class="form-control p-3 px-4 ">
+                <button type="submit" class="btn button-all">Subscribe Now</button></form></div>
+               </div>
+             </div></div></div>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="row footer-under p-4" >
+       <div class="col">
+         <div class="container">
+           <div class="row">
+            <div class="col"><div><p class="text-white size-font">© 2021 - All Rights Reserved - Designed by Cute Themes.</p></div></div>
+            <div class="col"><div><p></p></div></div>
+            <div class="col text-end"><div><a href="" class="text-decoration-none text-color me-2 size-font" id="link16">Terms&Conditions</a><span class="border-footer"></span><a href="" class="text-decoration-none  text-color ms-1 " id="link17"> Privacy Policy</a><div></div>
+           </div>
+         </div>
+       </div>
+      </div>
+</div>
+
+    <script src="js/bootstrap.bundle.min (2).js"></script>
+  </body>
+</html>
